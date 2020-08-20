@@ -7,12 +7,19 @@
 
 </head>
 <body>
-    <button onclick='togglePan()'>Toggle Pan</button>
+    <button onclick='toggleMode(modes.pan)'>Toggle Pan</button>
+    <button onclick='toggleMode(modes.drawing)'>Toggle Drawing</button>
+    <input id="colorPicker" value="FFA000" data-jscolor="{preset:'small dark', position:'right'}">
+    <button onclick='clearCanvas(canvas)'>Clear</button>
     <canvas id="canvas">
 
     </canvas>
+
+    <button onclick='createRect(canvas)'>Rectangle</button>
+    <button onclick='createCirc(canvas)'>Circle</button>
     <script src="./lib/fabric.min.js"></script>
     <script src="index.js"></script>
+    <script src="./lib/jscolor.js"></script>
 </body>
 </html>
 
